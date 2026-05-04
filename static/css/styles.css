@@ -22,3 +22,96 @@ input, textarea, button {
     margin-bottom: 1rem;
     font-size: 1rem;
 }
+
+.site-header {
+    background: #0b2c47;
+    color: white;
+    padding: 2rem 2rem 1.5rem;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.site-header p {
+    margin: 0.3rem 0 0;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    height: 56px;
+    margin-right: 1rem;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.brand-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+
+.intro {
+    margin-bottom: 3rem;
+}
+
+.lead {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.capabilities {
+    list-style: none;
+    padding: 0;
+}
+
+.capabilities li {
+    margin-bottom: 1.7rem;
+    line-height: 1.5;
+}
+
+.capabilities strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.site-footer {
+    background: #f4f6f8;       /* subtle light grey, not pure white */
+    border-top: 1px solid #dbe1e6;
+    padding: 2rem 2rem 2.2rem;
+    margin-top: 4rem;
+    text-align: center;
+    color: #222;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    height: 36px;
+    width: auto;
+    opacity: 1;               /* remove fading */
+    margin-bottom: 0.75rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
