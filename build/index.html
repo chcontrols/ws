@@ -18,11 +18,10 @@
 <main>
     
 
-
 <section class="intro">
     <p class="lead">
         C&amp;H Controls is an electrical and controls engineering company
-        providing practical site‑based services to industrial facilities.
+        providing practical site-based services to industrial facilities.
     </p>
 
     <p>
@@ -35,44 +34,55 @@
 <section>
     <h2>Capabilities</h2>
 
-    <ul class="capabilities">
-        <li>
-            <strong>Electrical Control Systems</strong>
-            Installation, modification, and upgrading of electrical control systems,
-            including control panels, MCC interfaces, and associated field wiring.
-        </li>
+    <div class="capability-grid">
+        <div class="capability-card">
+            <h3>Electrical Control Systems</h3>
+            <p>
+                Installation, modification, and upgrading of electrical control
+                systems, including control panels, MCC interfaces, and field wiring.
+            </p>
+        </div>
 
-        <li>
-            <strong>Instrumentation Installation &amp; Modification</strong>
-            Installation, replacement, and reconfiguration of process instrumentation,
-            including loop wiring, terminations, and testing support.
-        </li>
+        <div class="capability-card">
+            <h3>Instrumentation</h3>
+            <p>
+                Installation, replacement, and modification of process
+                instrumentation, including loop wiring and testing support.
+            </p>
+        </div>
 
-        <li>
-            <strong>Control Panel Works</strong>
-            Control panel wiring, upgrades, fault rectification, and documentation
-            updates for new and existing panels.
-        </li>
+        <div class="capability-card">
+            <h3>Control Panels</h3>
+            <p>
+                Panel wiring, upgrades, fault rectification, and documentation
+                updates for new and existing panels.
+            </p>
+        </div>
 
-        <li>
-            <strong>Breakdown Assistance &amp; Fault Finding</strong>
-            Electrical and controls fault finding on industrial plant and equipment,
-            including breakdown support, issue isolation, and corrective works to
-            restore safe operation.
-        </li>
+        <div class="capability-card">
+            <h3>Breakdown &amp; Fault Finding</h3>
+            <p>
+                Electrical and controls fault finding on industrial plant,
+                including breakdown support and corrective works.
+            </p>
+        </div>
 
-        <li>
-            <strong>Testing &amp; Commissioning</strong>
-            Loop checking, point‑to‑point testing, functional testing, and on‑site
-            commissioning support during installations and upgrades.
-        </li>
+        <div class="capability-card">
+            <h3>Testing &amp; Commissioning</h3>
+            <p>
+                Loop checking, point-to-point testing, functional testing,
+                and on-site commissioning support.
+            </p>
+        </div>
 
-        <li>
-            <strong>Brownfield Modifications</strong>
-            Electrical and controls modifications to existing plant, including
-            shutdown works and staged upgrades on live sites.
-        </li>
-    </ul>
+        <div class="capability-card">
+            <h3>Brownfield Modifications</h3>
+            <p>
+                Electrical and controls modifications on live sites,
+                including shutdown and staged upgrade works.
+            </p>
+        </div>
+    </div>
 </section>
 
 <section>
@@ -92,22 +102,43 @@
     </ul>
 </section>
 
-<section>
+<section class="contact-section">
     <h2>Contact</h2>
 
-    <p>
+    <p class="contact-intro">
         For electrical and controls engineering enquiries, including breakdown
         assistance or project support, please provide a brief description of
         your requirements.
     </p>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="post">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="text" name="company" placeholder="Company">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone">
-        <textarea name="message" placeholder="Brief description"></textarea>
-        <button type="submit">Send enquiry</button>
+    <form
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        class="contact-form"
+    >
+        <div class="form-row">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="company" placeholder="Company">
+        </div>
+
+        <div class="form-row">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone">
+        </div>
+
+        <div class="form-row">
+            <textarea
+                name="message"
+                rows="5"
+                placeholder="Brief description of your requirements"
+            ></textarea>
+        </div>
+
+        <div class="form-row">
+            <button type="submit" class="submit-button">
+                Send Enquiry
+            </button>
+        </div>
     </form>
 </section>
 
@@ -121,6 +152,7 @@
         Industrial Control &amp; Instrumentation
     </p>
 </footer>
+
 
 </body>
 </html>

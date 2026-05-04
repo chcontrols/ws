@@ -1,31 +1,47 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    color: #222;
+/* =========================
+   Global reset & box model
+   ========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-header {
-    background: #0b2c47;
-    color: white;
-    padding: 2rem;
+
+/* =========================
+   Base layout & typography
+   ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #ffffff;
 }
 
 main {
-    max-width: 900px;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 2rem;
-    margin: auto;
 }
 
-input, textarea, button {
-    width: 100%;
-    padding: 0.6rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+section {
+    margin-bottom: 4.5rem;
 }
+
+h2 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   Header
+   ========================= */
 
 .site-header {
     background: #0b2c47;
-    color: white;
+    color: #ffffff;
     padding: 2rem 2rem 1.5rem;
 }
 
@@ -46,33 +62,13 @@ input, textarea, button {
     opacity: 0.9;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
-}
 
-.logo {
-    height: 56px;
-    margin-right: 1rem;
-}
-
-.brand-text h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.brand-text p {
-    margin: 0;
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
+/* =========================
+   Intro
+   ========================= */
 
 .intro {
-    margin-bottom: 3rem;
+    max-width: 900px;
 }
 
 .lead {
@@ -80,38 +76,125 @@ input, textarea, button {
     font-weight: 500;
 }
 
-.capabilities {
-    list-style: none;
-    padding: 0;
+
+/* =========================
+   Capabilities (cards)
+   ========================= */
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.capabilities li {
-    margin-bottom: 1.7rem;
-    line-height: 1.5;
+.capability-card {
+    background: #ffffff;
+    border: 1px solid #e7ebef;
+    padding: 1.5rem;
 }
 
-.capabilities strong {
-    display: block;
+.capability-card h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
 }
+
+.capability-card p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   Industries
+   ========================= */
+
+.industries {
+    margin-top: 1rem;
+}
+
+.industries li {
+    margin-bottom: 0.4rem;
+}
+
+
+/* =========================
+   Contact section
+   ========================= */
+
+.contact-section {
+    max-width: 1100px;
+    margin: 4rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e6eaee;
+}
+
+.contact-intro {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    padding-top: 1.5rem;
+}
+
+
+/* form grid layout */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.65rem 0.7rem;
+    border: 1px solid #cfd6dc;
+    border-radius: 2px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0b2c47;
+}
+
+
+/* submit button */
+.submit-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    background: #0b2c47;
+    color: #ffffff;
+    border: 1px solid #0b2c47;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #08304f;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
 
 .site-footer {
-    background: #f4f6f8;       /* subtle light grey, not pure white */
+    background: #f4f6f8;
     border-top: 1px solid #dbe1e6;
-    padding: 2rem 2rem 2.2rem;
-    margin-top: 4rem;
+    padding: 2rem;
+    margin-top: 5rem;
     text-align: center;
-    color: #222;
     font-size: 0.9rem;
-}
-
-.footer-logo {
-    height: 36px;
-    width: auto;
-    opacity: 1;               /* remove fading */
-    margin-bottom: 0.75rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    color: #222;
 }
