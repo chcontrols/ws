@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <h2>Services</h2>
+    <ul>
+        <li>Electrical control systems installation</li>
+        <li>Instrumentation installation and modification</li>
+        <li>Control panel wiring and upgrades</li>
+        <li>Testing and commissioning support</li>
+        <li>Brownfield control modifications</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Enquiries</h2>
+    <p>
+        For industrial electrical and controls engineering enquiries,
+        please provide a brief description of your requirements.
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="company" placeholder="Company">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+        <textarea name="message" placeholder="Brief description"></textarea>
+        <button type="submit">Send Enquiry</button>
+    </form>
+</section>
+
+{% endblock %}
