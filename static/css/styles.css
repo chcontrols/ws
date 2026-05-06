@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 
-
 /* =========================
    Base layout & typography
    ========================= */
@@ -16,15 +15,18 @@
 :root {
     --primary: #1f2933;
     --accent: #2f80ed;
+    --header: #0b2c47;
     --bg: #ffffff;
+    --border: #e6eaee;
 }
 
 body {
-    font-family: system-ui, sans-serif;
     margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
     color: var(--primary);
+    background: var(--bg);
+    line-height: 1.5;
 }
-
 
 main {
     max-width: 1100px;
@@ -36,17 +38,20 @@ section {
     margin-bottom: 4.5rem;
 }
 
+h1, h2, h3 {
+    color: #111;
+}
+
 h2 {
     margin-top: 0;
 }
-
 
 /* =========================
    Header
    ========================= */
 
 .site-header {
-    background: #0b2c47;
+    background: var(--header);
     color: #ffffff;
     padding: 2rem 2rem 1.5rem;
 }
@@ -56,10 +61,10 @@ h2 {
     margin: 0 auto;
 }
 
-.site-header h1 {
-    margin: 0;
+.site-header strong {
     font-size: 2.2rem;
     font-weight: 600;
+    display: block;
 }
 
 .site-header p {
@@ -67,7 +72,6 @@ h2 {
     font-size: 1.05rem;
     opacity: 0.9;
 }
-
 
 /* =========================
    Intro
@@ -82,9 +86,8 @@ h2 {
     font-weight: 500;
 }
 
-
 /* =========================
-   Capabilities (cards)
+   Capabilities
    ========================= */
 
 .capability-grid {
@@ -96,7 +99,7 @@ h2 {
 
 .capability-card {
     background: #ffffff;
-    border: 1px solid #e7ebef;
+    border: 1px solid var(--border);
     padding: 1.5rem;
 }
 
@@ -109,9 +112,7 @@ h2 {
 .capability-card p {
     margin-bottom: 0;
     font-size: 0.95rem;
-    line-height: 1.45;
 }
-
 
 /* =========================
    Industries
@@ -119,49 +120,50 @@ h2 {
 
 .industries {
     margin-top: 1rem;
+    padding-left: 1.25rem;
 }
 
 .industries li {
     margin-bottom: 0.4rem;
 }
 
-
 /* =========================
    Contact section
    ========================= */
 
 .contact-section {
-    max-width: 1100px;
-    margin: 4rem auto 0;
     padding-top: 1.5rem;
-    border-top: 1px solid #e6eaee;
+    border-top: 1px solid var(--border);
 }
 
 .contact-intro {
+    max-width: 600px;
     margin-bottom: 1.5rem;
 }
 
+/* Contact form container */
 .contact-form {
-    padding-top: 1.5rem;
+    max-width: 600px;
+    padding: 1.5rem;
+    background: #fafafa;
+    border: 1px solid var(--border);
 }
 
-
-/* form grid layout */
-.form-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
+/* Labels + inputs */
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
-
-/* inputs & textarea */
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    font-family: inherit;
-    font-size: 0.95rem;
+    margin-top: 0.35rem;
     padding: 0.65rem 0.7rem;
+    font-size: 0.95rem;
+    font-family: inherit;
     border: 1px solid #cfd6dc;
     border-radius: 2px;
 }
@@ -169,27 +171,25 @@ h2 {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #0b2c47;
+    border-color: var(--header);
 }
 
-
-/* submit button */
-.submit-button {
-    grid-column: 1 / -1;
-    width: 100%;
-    background: #0b2c47;
+/* Submit button */
+.contact-form button {
+    margin-top: 0.3rem;
+    align-self: flex-start;
+    background: var(--header);
     color: #ffffff;
-    border: 1px solid #0b2c47;
-    padding: 0.8rem;
+    border: none;
+    padding: 0.75rem 1.5rem;
     font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
 }
 
-.submit-button:hover {
+.contact-form button:hover {
     background: #08304f;
 }
-
 
 /* =========================
    Footer
