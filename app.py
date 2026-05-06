@@ -20,35 +20,33 @@ def index():
 # -----------------------
 
 def build():
+    import os
+    import shutil
+    from flask import render_template
+
     build_dir = "build"
 
-    # Clean previous build
+    # Clean build directory
     if os.path.exists(build_dir):
         shutil.rmtree(build_dir)
-    os.makedirs(build_dir, exist_ok=True)
-
-    pages = {
-        "index.html": "index.html",
-    }
+    os.makedirs(build_dir)
 
     with app.app_context():
-        for output_file, template in pages.items():
-            html = render_template(template)
-            with open(os.path.join(build_dir, output_file), "w", encoding="utf-8") as f:
-                f.write(html)
+        html = render_template("index.html")
+        with open(os.path.join(build_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(html)
 
     # Copy static assets
     if os.path.exists("static"):
         shutil.copytree(
             "static",
             os.path.join(build_dir, "static"),
-            dirs_exist_ok=True,
         )
 
-    # Disable Jekyll on GitHub Pages
+    # Ensure GitHub Pages does not use Jekyll
     open(os.path.join(build_dir, ".nojekyll"), "w").close()
 
-    print("✅ Static site built successfully")
+    print("✅ Build complete")
 
 
 # -----------------------
