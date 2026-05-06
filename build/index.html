@@ -86,7 +86,22 @@ Electrical & Controls Engineering – C&H Controls
 <section class="contact-section">
     <h2>Contact</h2>
 
-    https://formspree.io/f/YOUR_FORM_ID
+    <p class="contact-intro">
+        For electrical and controls engineering enquiries, please provide
+        a brief description of your requirements.
+    </p>
+
+    <form
+        action="https://formspree.io/f/xaqvjpyo"
+        method="POST"
+        class="contact-form"
+    >
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New website enquiry">
+
+        <!-- Honeypot (spam protection) -->
+        <input type="text" name="_gotcha" style="display:none">
+
         <label>
             Name
             <input type="text" name="name" required>
@@ -99,7 +114,7 @@ Electrical & Controls Engineering – C&H Controls
 
         <label>
             Message
-            <textarea name="message" rows="5"></textarea>
+            <textarea name="message" rows="5" required></textarea>
         </label>
 
         <button type="submit">Send Enquiry</button>
