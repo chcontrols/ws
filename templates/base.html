@@ -2,31 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>C&H Controls</title>
+
+    <title>{% block title %}C&H Controls{% endblock %}</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <meta
+        name="description"
+        content="Electrical and controls engineering services specialising in industrial control and instrumentation."
+    >
+
+    <link rel="stylesheet" href="./static/css/styles.css">
 </head>
+
 <body>
 
 <header class="site-header">
     <div class="header-inner">
-        <h1>C&amp;H Controls</h1>
-        <p>Electrical &amp; Controls Engineering</p>
+        <div class="site-brand">
+            <strong>CH Controls</strong>
+            <p>Electrical &amp; Controls Engineering</p>
+        </div>
     </div>
 </header>
 
-<main>
+<main id="content">
     {% block content %}{% endblock %}
 </main>
 
 <footer class="site-footer">
     <p>
-        C&amp;H Controls<br>
+        CH Controls<br>
         Electrical &amp; Controls Engineering<br>
         Industrial Control &amp; Instrumentation
     </p>
 </footer>
-
 
 </body>
 </html>
